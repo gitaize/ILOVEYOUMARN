@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 25px 15px;
     font-family: "Trebuchet MS", Arial, sans-serif;
     background: linear-gradient(135deg, #ffe6ef, #ffc5da, #fff0f5);
     color: #75465a;
@@ -26,8 +26,8 @@ body {
 
 .card {
     width: 100%;
-    max-width: 420px;
-    background: rgba(255,255,255,0.88);
+    max-width: 440px;
+    background: rgba(255,255,255,0.92);
     border: 2px solid white;
     border-radius: 30px;
     padding: 30px 24px;
@@ -39,14 +39,13 @@ body {
 .tag {
     background: #ffe5ef;
     display: inline-block;
-    padding: 8px 15px;
+    padding: 8px 14px;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 11px;
     color: #bd547d;
     letter-spacing: 1px;
 }
 
-/* PANDA DESIGN */
 .panda {
     position: relative;
     width: 180px;
@@ -63,13 +62,8 @@ body {
     top: 5px;
 }
 
-.ear.left {
-    left: 13px;
-}
-
-.ear.right {
-    right: 13px;
-}
+.ear.left { left: 13px; }
+.ear.right { right: 13px; }
 
 .face {
     position: absolute;
@@ -77,7 +71,7 @@ body {
     height: 133px;
     left: 15px;
     top: 23px;
-    background: #fff;
+    background: white;
     border: 2px solid #eee5e9;
     border-radius: 48% 48% 45% 45%;
     z-index: 2;
@@ -119,7 +113,7 @@ body {
     width: 17px;
     height: 12px;
     background: #29252d;
-    border-radius: 50% 50% 60% 60%;
+    border-radius: 50%;
 }
 
 .mouth {
@@ -151,13 +145,8 @@ body {
     border-radius: 50%;
 }
 
-.blush.left {
-    left: 12px;
-}
-
-.blush.right {
-    right: 12px;
-}
+.blush.left { left: 12px; }
+.blush.right { right: 12px; }
 
 .bow {
     position: absolute;
@@ -174,8 +163,8 @@ h1 {
     margin: 10px 0;
 }
 
-p {
-    line-height: 1.7;
+.intro {
+    line-height: 1.8;
     font-size: 14px;
 }
 
@@ -184,7 +173,7 @@ button {
     color: white;
     border: none;
     border-radius: 30px;
-    padding: 14px 23px;
+    padding: 14px 22px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
@@ -202,13 +191,20 @@ button:hover {
     background: #fff1f6;
     border: 1px dashed #e99ab6;
     border-radius: 20px;
-    padding: 18px;
+    padding: 20px;
     margin-top: 22px;
     text-align: left;
-    animation: pop 0.5s ease;
+    line-height: 1.8;
+    font-size: 14px;
+    animation: appear 0.5s ease;
 }
 
 #letter h3 {
+    text-align: center;
+    color: #c34f7c;
+}
+
+.signature {
     text-align: center;
     color: #c34f7c;
 }
@@ -223,8 +219,9 @@ button:hover {
     position: fixed;
     bottom: -30px;
     font-size: 22px;
-    animation: floatUp 7s linear infinite;
+    animation: floatUp 8s linear infinite;
     pointer-events: none;
+    z-index: -1;
 }
 
 @keyframes floatUp {
@@ -239,9 +236,9 @@ button:hover {
     }
 }
 
-@keyframes pop {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+@keyframes appear {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -249,7 +246,8 @@ button:hover {
 <body>
 
 <div class="card">
-    <div class="tag">A LITTLE MESSAGE FOR YOU ♡</div>
+
+    <div class="tag">A LITTLE MESSAGE FROM MY HEART ♡</div>
 
     <div class="panda">
         <div class="ear left"></div>
@@ -259,9 +257,11 @@ button:hover {
             <div class="eye-patch left">
                 <div class="eye"></div>
             </div>
+
             <div class="eye-patch right">
                 <div class="eye"></div>
             </div>
+
             <div class="blush left"></div>
             <div class="blush right"></div>
             <div class="nose"></div>
@@ -271,11 +271,11 @@ button:hover {
         <div class="bow">🎀</div>
     </div>
 
-    <h1>Hi, My Love! 🐼</h1>
+    <h1>Hi, My Love! 🐼💗</h1>
 
-    <p>
-        Even this little panda has<br>
-        something to tell you. 💗
+    <p class="intro">
+        I have something important to tell you.<br>
+        Please open my little letter. 💌
     </p>
 
     <button onclick="openLetter()" id="mainButton">
@@ -283,55 +283,95 @@ button:hover {
     </button>
 
     <div id="letter">
-        <h3>To My Favorite Person 🐼💗</h3>
+
+        <h3>To My Marnie 🐼💗</h3>
 
         <p>
-            I'm sorry if I hurt you or made you sad.
-            I know that saying sorry cannot fix everything,
-            but I want you to know that your feelings matter to me.
-        </p>
-
-        <p>
-            I want to listen to you, understand you,
-            and do better. You are important to me,
-            and I hope we can talk things out when you're ready.
+            Love, I'm really sorry sa akong nasulti nimo.
+            Kabalo ko nga dili to sakto nga words, and you
+            don't deserve to hear those words from me,
+            especially gikan sa person nga love kaayo ka.
         </p>
 
         <p>
-            No pressure. I just want to make things right
-            between us. I'm sorry, my love. 🥹💕
+            Bisan usa ra to ka word, I know nga pwede gihapon
+            to makasakit nimo. Honestly, nag-echo gihapon sa
+            akong utok ang akong nasulti. I keep thinking
+            about it, and I really regret saying it kay dili
+            jud nako gusto nga masakitan ka tungod sa akong words.
         </p>
 
-        <p style="text-align:center">
-            Sending you panda hugs! 🐼💗
+        <p>
+            Three years na ta, love. After everything we've
+             shared, I never want to be the reason why you feel 
+             hurt. Love kaayo tika, and I'm really sorry sa akong nasulti.
         </p>
 
-        <p>With love,<br><b>Aize humot ♡</b></p>
+        <p>
+            I know nga dili enough ang sorry para mawala dayon
+            ang sakit. I won't expect you to forget it right
+            away. Dili nako i-justify akong nasulti, kay kabalo
+            ko nga sayop jud to.
+        </p>
+
+        <p>
+            I'm still learning how to handle my emotions and
+            choose my words better, pero dili na excuse para
+            makasakit ko nimo. I want to be more careful sa
+            akong words, especially when we're upset, because
+            you deserve love and respect, even during our
+            hardest moments.
+        </p>
+
+        <p>
+            I'm sorry, love. Dili jud nako gusto nga
+            mahimong reason sa imong sadness. I love you so
+            much, and I don't want my words to make you
+            question how much you mean to me.
+        </p>
+
+        <p>
+            Thank you for being part of my life for these
+            three years. I hope I can show you through my
+            actions nga I really mean my apology.
+        </p>
+
+        <p class="signature">
+            <b>I love you so much, pompom. I'm really sorry. 🐼💗</b>
+        </p>
+
+        <p>
+            Sending you panda hugs! 🐼💕
+        </p>
+
+        <p>
+            With love,<br>
+            <b>Aize humot ♡</b>
+        </p>
+
     </div>
 
     <div class="footer">
-        made with love  ♡
+        made with love, just for you ♡
     </div>
+
 </div>
 
 <script>
 function openLetter() {
-    const letter = document.getElementById("letter");
-    const button = document.getElementById("mainButton");
-
-    letter.style.display = "block";
-    button.innerText = "My letter is open 💗";
-    button.disabled = true;
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("mainButton").innerText =
+        "My letter is open 💗";
 }
 
 const emojis = ["💗", "💕", "♡", "🐼"];
 
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < 15; i++) {
     const heart = document.createElement("div");
     heart.className = "floating";
     heart.innerText = emojis[i % emojis.length];
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDelay = Math.random() * 7 + "s";
+    heart.style.animationDelay = Math.random() * 8 + "s";
     heart.style.animationDuration = (5 + Math.random() * 5) + "s";
     document.body.appendChild(heart);
 }
