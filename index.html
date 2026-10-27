@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You, My Love 🐼💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6ef, #ffc5da, #fff0f5);
+    color: #75465a;
+    overflow-x: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.88);
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 15px 40px #bd638333;
+    position: relative;
+}
+
+.tag {
+    background: #ffe5ef;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    color: #bd547d;
+    letter-spacing: 1px;
+}
+
+/* PANDA DESIGN */
+.panda {
+    position: relative;
+    width: 180px;
+    height: 170px;
+    margin: 25px auto 20px;
+}
+
+.ear {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    background: #28252c;
+    border-radius: 50%;
+    top: 5px;
+}
+
+.ear.left {
+    left: 13px;
+}
+
+.ear.right {
+    right: 13px;
+}
+
+.face {
+    position: absolute;
+    width: 150px;
+    height: 133px;
+    left: 15px;
+    top: 23px;
+    background: #fff;
+    border: 2px solid #eee5e9;
+    border-radius: 48% 48% 45% 45%;
+    z-index: 2;
+}
+
+.eye-patch {
+    position: absolute;
+    width: 37px;
+    height: 49px;
+    background: #29252d;
+    border-radius: 50%;
+    top: 37px;
+}
+
+.eye-patch.left {
+    left: 23px;
+    transform: rotate(25deg);
+}
+
+.eye-patch.right {
+    right: 23px;
+    transform: rotate(-25deg);
+}
+
+.eye {
+    position: absolute;
+    width: 9px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 14px;
+    left: 14px;
+}
+
+.nose {
+    position: absolute;
+    top: 74px;
+    left: 66px;
+    width: 17px;
+    height: 12px;
+    background: #29252d;
+    border-radius: 50% 50% 60% 60%;
+}
+
+.mouth {
+    position: absolute;
+    top: 84px;
+    left: 74px;
+    width: 2px;
+    height: 10px;
+    background: #29252d;
+}
+
+.mouth:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -7px;
+    width: 14px;
+    height: 7px;
+    border-bottom: 2px solid #29252d;
+    border-radius: 50%;
+}
+
+.blush {
+    position: absolute;
+    top: 80px;
+    width: 20px;
+    height: 11px;
+    background: #ffb4c8;
+    border-radius: 50%;
+}
+
+.blush.left {
+    left: 12px;
+}
+
+.blush.right {
+    right: 12px;
+}
+
+.bow {
+    position: absolute;
+    z-index: 3;
+    top: 12px;
+    right: 20px;
+    font-size: 32px;
+    transform: rotate(15deg);
+}
+
+h1 {
+    font-size: 28px;
+    color: #c34f7c;
+    margin: 10px 0;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+button {
+    background: linear-gradient(135deg, #e879a1, #cb4e7d);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 23px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px #d35d873d;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+#letter {
+    display: none;
+    background: #fff1f6;
+    border: 1px dashed #e99ab6;
+    border-radius: 20px;
+    padding: 18px;
+    margin-top: 22px;
+    text-align: left;
+    animation: pop 0.5s ease;
+}
+
+#letter h3 {
+    text-align: center;
+    color: #c34f7c;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #bd7993;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: floatUp 7s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.8; }
+    to {
+        transform: translateY(-110vh) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="tag">A LITTLE MESSAGE FOR YOU ♡</div>
+
+    <div class="panda">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+
+        <div class="face">
+            <div class="eye-patch left">
+                <div class="eye"></div>
+            </div>
+            <div class="eye-patch right">
+                <div class="eye"></div>
+            </div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+
+        <div class="bow">🎀</div>
+    </div>
+
+    <h1>Hi, My Love! 🐼</h1>
+
+    <p>
+        Even this little panda has<br>
+        something to tell you. 💗
+    </p>
+
+    <button onclick="openLetter()" id="mainButton">
+        Open My Letter 💌
+    </button>
+
+    <div id="letter">
+        <h3>To My Favorite Person 🐼💗</h3>
+
+        <p>
+            I'm sorry if I hurt you or made you sad.
+            I know that saying sorry cannot fix everything,
+            but I want you to know that your feelings matter to me.
+        </p>
+
+        <p>
+            I want to listen to you, understand you,
+            and do better. You are important to me,
+            and I hope we can talk things out when you're ready.
+        </p>
+
+        <p>
+            No pressure. I just want to make things right
+            between us. I'm sorry, my love. 🥹💕
+        </p>
+
+        <p style="text-align:center">
+            Sending you panda hugs! 🐼💗
+        </p>
+
+        <p>With love,<br><b>Aize humot ♡</b></p>
+    </div>
+
+    <div class="footer">
+        made with love  ♡
+    </div>
+</div>
+
+<script>
+function openLetter() {
+    const letter = document.getElementById("letter");
+    const button = document.getElementById("mainButton");
+
+    letter.style.display = "block";
+    button.innerText = "My letter is open 💗";
+    button.disabled = true;
+}
+
+const emojis = ["💗", "💕", "♡", "🐼"];
+
+for (let i = 0; i < 12; i++) {
+    const heart = document.createElement("div");
+    heart.className = "floating";
+    heart.innerText = emojis[i % emojis.length];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDelay = Math.random() * 7 + "s";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
